@@ -1,0 +1,419 @@
+@charset "UTF-8";
+/************************************
+リセットCSS
+************************************/
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: none;
+font-style: normal;
+text-align: left;
+zoom: 1;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+table {
+border-collapse: collapse;
+font-family: inherit;
+}
+h1,h2,h3,h4,h5 {
+font-size: 100%;
+font-weight: normal;
+line-height: 1;
+}
+input,textarea,select {
+font-family: inherit;
+font-size: 16px;
+}
+input[type="button"],input[type="text"],input[type="submit"] {
+-webkit-appearance: none;
+border-radius: 0;
+}
+textarea {
+resize: none;
+-webkit-appearance: none;
+border-radius: 0;
+}
+th,td {
+border-collapse: collapse;
+}
+table th,table td {
+white-space: nowrap;
+}
+ul,ol {
+list-style-type: none;
+}
+img {
+vertical-align: text-bottom;
+vertical-align: -webkit-baseline-middle;
+max-width: 100%;
+height: auto;
+width /***/:auto;
+}
+/************************************
+基本設定
+************************************/
+body{
+    background-color:#013065;
+    font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
+    font-family: "MS Mincho", "Hiragino Mincho ProN", "Serif";
+    color:#013065;
+    font-size:1rem;
+    opacity: 0.9;
+}
+a {
+    text-decoration: none;
+    color: #013065;
+}
+
+.section-title{
+    color: white;
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+    margin-bottom: 5%;
+    text-align: center;
+}
+/************************************
+メインビジュアル＆ヘッダー＆アピールエリア
+************************************/
+.mainvisual-header-appeal-area{
+    background-image: url(./images/background2.png);
+    background-position: center;
+    background-size: cover;
+    width:100%;
+    height: 80vh;
+    position: relative;
+}
+/************************************
+ヘッダー
+************************************/
+header{
+    background-color:white;
+    width: 90%;
+    display:flex;
+    border-radius:10px;
+    align-items:center;
+    margin: auto;
+    padding: 2.5vh 2vh;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    left: 50%;       /* 画面の横方向の中央 */
+    transform: translate(-50%, -50%); /* 要素自体の幅と高さの半分だけ左上に移動 */
+    top:10vh;
+    z-index: 1;
+}
+.header-logo-box{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    width: 20%;
+    font-family: "Oswald", sans-serif;
+    font-size: 1.7rem;
+}
+.header-logo-box img{
+    width: 30%;
+    margin-right:10px;
+}
+.header-menu-contact-box{
+    display: flex;
+    align-items: center;
+    width: 70%;
+    justify-content: space-between;
+}
+.header-menu-box{
+    display:flex;
+    align-items:center;
+    width: 70%;
+    justify-content: space-around;
+    font-weight: bold;
+}
+.contact-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: linear-gradient(to right,  #EBC479,#E4A428);
+    height: 7vh;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+}
+.contact-button:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+/************************************
+メインビジュアル
+************************************/
+.mainvisual{
+    width: 90%;
+    margin: auto;
+}
+.mainvisual-container{
+    display: flex;
+    flex-direction: column;
+    padding-top: 20%;
+}
+.mainvisual-text{
+    color: white;
+    font-size: 3rem;
+    width: 70%;
+    letter-spacing: 0.5rem;
+    margin-bottom: 5vh;
+    line-height:1.2;
+}
+.login-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    width: 20%;
+    border-radius: 10px;
+    background: linear-gradient(to right,#4090EA, #013065);
+    padding: 1rem 2rem;
+    text-align: center;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+    line-height:1.5;
+}
+.login-button:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+/************************************
+アピールエリア
+************************************/
+.appeal-area{
+    background: linear-gradient(to right,#FFFFFF, #4090EA);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 90%;
+    margin: auto;
+    left: 50%;       /* 画面の横方向の中央 */
+    transform: translate(-50%, -50%); /* 要素自体の幅と高さの半分だけ左上に移動 */
+    top: 125%;
+}
+.appeal-area-container{
+    display: flex;
+    flex-direction: column;
+    width: 39%;
+    padding: 3%;
+}
+.appeal-area-title{
+    font-size: 2rem;
+    margin-bottom: 10%;
+}
+.appeal-area-text{
+    margin-bottom: 10%;
+    overflow-wrap: break-word;
+}
+.appeal-area-button.login-button{
+    width: 60%;
+}
+.appeal-area-img{
+    width: 59%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.appeal-area-img img{
+    width: 90%;
+    padding-top: 10%;
+}
+/************************************
+事業紹介
+************************************/
+.business-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 35%;
+}
+.business-container{
+    display: flex;
+    justify-content: flex-end;
+}
+.business-container.reverse{
+    justify-content: flex-start;
+}
+.business-box{
+    background: linear-gradient(to right,#F8F8F8, #BADBFF);
+    border-radius: 10px 0px 0px 10px;
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    margin-bottom: 5%;
+}
+.business-box.reverse{
+    border-radius: 0px 10px 10px 0px;
+    flex-direction: row-reverse;
+}
+.business-box-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 39%;
+}
+.business-box-img img{
+    border-radius: 10px;
+}
+.business-box-contents{
+    display: flex;
+    flex-direction: column;
+    width: 59%;
+}
+.business-box-title.reverse{
+    text-align: right;
+}
+
+.business-box-title{
+    font-size: 2rem;
+    margin-bottom: 5%;
+}
+.business-box-text.reverse{
+    text-align: right;
+}
+/************************************
+会社概要
+************************************/
+.company-section{
+    display: flex;
+    flex-direction: column;
+    background-image: url('./images/1.png');
+    background-position: center;
+    align-items: center;
+    background-size: cover;
+    padding: 5%;
+}
+.company-box{
+    opacity: 0.8;
+    background-color: white;
+    border-radius: 10px;
+    padding: 3%;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+}
+.company-box-row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5%;
+}
+.company-box-row-title{
+    width: 30%;
+}
+.company-box-row-contents{
+    width: 70%;
+}
+/************************************
+お問い合わせ
+************************************/
+.contact-section{
+    display: flex;
+    flex-direction: column;
+    padding: 5% 0%;
+}
+.contact-form{
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+.form-row{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 5vh;
+    margin-bottom: 3%;
+}
+.form-row-title{
+    width: 30%;
+    color: white;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: flex-start;
+}
+.form-row-contents{
+    background-color: white;
+    border-radius: 10px !important;
+    width: 70%;
+    padding: 2%;
+}
+.form-row.textarea{
+    height: 20vh;
+}
+.form-row-contents.textarea{
+    height: 20vh;
+}
+.contact-button.submit{
+    margin-top: 10%;
+    font-size: 1.5rem;
+    font-family: "MS Mincho", "Hiragino Mincho ProN", "Serif";
+}
+.footer-section{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('./images/footer.png');
+    height: 50vh;
+    background-position: center;
+    background-size: cover;
+    justify-content: flex-end;
+}
+.footer-logo-title{
+    color: white;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-logo-title img{
+    width: 7%;
+    margin-right: 2%;
+}
+.footer-title{
+    font-size: 2.1rem;
+    font-family: "Oswald", sans-serif;
+}
+.footer-menu{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    padding: 5% 0%;
+    font-size: 1.3rem;
+}
+
+/************************************
+フッター
+************************************/
+footer{
+    background-color:#013065;
+    color: white;
+    text-align:center;
+    padding: 1%;
+}
