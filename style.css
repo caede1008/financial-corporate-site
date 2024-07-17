@@ -2,418 +2,1064 @@
 /************************************
 リセットCSS
 ************************************/
-@charset "UTF-8";
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-margin: 0;
-padding: 0;
-border: none;
-font-style: normal;
-text-align: left;
-zoom: 1;
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-display: block;
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-style: normal;
+  text-align: left;
+  zoom: 1;
 }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
 table {
-border-collapse: collapse;
-font-family: inherit;
+  border-collapse: collapse;
+  font-family: inherit;
 }
-h1,h2,h3,h4,h5 {
-font-size: 100%;
-font-weight: normal;
-line-height: 1;
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-size: 100%;
+  font-weight: normal;
+  line-height: 1;
 }
-input,textarea,select {
-font-family: inherit;
-font-size: 16px;
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: 16px;
 }
-input[type="button"],input[type="text"],input[type="submit"] {
--webkit-appearance: none;
-border-radius: 0;
+
+input[type="button"],
+input[type="text"],
+input[type="submit"] {
+  -webkit-appearance: none;
+  border-radius: 0;
 }
+
 textarea {
-resize: none;
--webkit-appearance: none;
-border-radius: 0;
+  resize: none;
+  -webkit-appearance: none;
+  border-radius: 0;
 }
-th,td {
-border-collapse: collapse;
+
+th,
+td {
+  border-collapse: collapse;
 }
-table th,table td {
-white-space: nowrap;
+
+table th,
+table td {
+  white-space: nowrap;
 }
-ul,ol {
-list-style-type: none;
+
+ul,
+ol {
+  list-style-type: none;
 }
+
 img {
-vertical-align: text-bottom;
-vertical-align: -webkit-baseline-middle;
-max-width: 100%;
-height: auto;
-width /***/:auto;
+  vertical-align: text-bottom;
+  max-width: 100%;
+  height: auto;
+  width: auto;
 }
+
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+}
+
 /************************************
 基本設定
 ************************************/
-body{
-    background-color:#013065;
-    font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
-    font-family: "MS Mincho", "Hiragino Mincho ProN", "Serif";
-    color:#013065;
-    font-size:1rem;
-    opacity: 0.9;
-}
-a {
-    text-decoration: none;
-    color: #013065;
+body {
+  background-color: #013065;
+  font-family: "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic",
+    メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
+  font-family: "MS Mincho", "Hiragino Mincho ProN", "Serif";
+  color: #013065;
+  font-size: 1rem;
+  opacity: 0.9;
 }
 
-.section-title{
-    color: white;
-    font-size: 2rem;
-    letter-spacing: 0.5rem;
-    margin-bottom: 5%;
-    text-align: center;
+body.is-fixed {
+  overflow: hidden;
 }
+
+a {
+  text-decoration: none;
+  color: #013065;
+}
+
+.section-title {
+  color: white;
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+  margin-bottom: 5%;
+  text-align: center;
+}
+
 /************************************
 メインビジュアル＆ヘッダー＆アピールエリア
 ************************************/
-.mainvisual-header-appeal-area{
-    background-image: url(./images/background2.png);
-    background-position: center;
-    background-size: cover;
-    width:100%;
-    height: 80vh;
-    position: relative;
+.mainvisual-header-appeal-area {
+  background-image: url(./images/background2.png);
+  background-position: center;
+  background-position: 50% 0;
+  background-size: cover;
+  /* height: 80vh; */
+  height: 90vh;
+  width: 100%;
+  position: relative;
+  background-repeat: no-repeat;
 }
+
 /************************************
 ヘッダー
 ************************************/
-header{
-    background-color:white;
-    width: 90%;
-    display:flex;
-    border-radius:10px;
-    align-items:center;
-    margin: auto;
-    padding: 2.5vh 2vh;
-    justify-content: space-between;
-    font-size: 1.5rem;
-    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
-    position: fixed;
-    left: 50%;       /* 画面の横方向の中央 */
-    transform: translate(-50%, -50%); /* 要素自体の幅と高さの半分だけ左上に移動 */
-    top:10vh;
-    z-index: 1;
+header {
+  background-color: white;
+  width: 90%;
+  display: flex;
+  border-radius: 10px;
+  align-items: center;
+  margin: auto;
+  padding: 2.5vh 2vh;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  left: 50%; /* 画面の横方向の中央 */
+  transform: translate(-50%, -50%); /* 要素自体の幅と高さの半分だけ左上に移動 */
+  top: 12vh;
+  z-index: 3;
 }
-.header-logo-box{
-    display:flex;
-    align-items:center;
-    justify-content: center;
-    width: 20%;
-    font-family: "Oswald", sans-serif;
-    font-size: 1.7rem;
+
+.header-logo-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 27%;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.7rem;
 }
-.header-logo-box img{
-    width: 30%;
-    margin-right:10px;
+
+.header-logo-box img {
+  width: 30%;
+  margin-right: 10px;
 }
-.header-menu-contact-box{
-    display: flex;
-    align-items: center;
-    width: 70%;
-    justify-content: space-between;
+
+.header-menu-contact-box {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  justify-content: space-between;
 }
-.header-menu-box{
-    display:flex;
-    align-items:center;
-    width: 70%;
-    justify-content: space-around;
-    font-weight: bold;
+
+.header-menu-box {
+  display: flex;
+
+  align-items: center;
+  width: 70%;
+  justify-content: space-around;
+  font-weight: bold;
 }
-.contact-button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    background: linear-gradient(to right,  #EBC479,#E4A428);
-    height: 7vh;
-    border-radius: 10px;
-    width: 30%;
-    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
-    font-weight: bold;
+
+.contact-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: linear-gradient(to right, #ebc479, #e4a428);
+  height: 7vh;
+  border-radius: 10px;
+  width: 30%;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
 }
-.contact-button:hover{
-    cursor: pointer;
-    opacity: 0.7;
+
+.contact-button a {
+  color: white;
 }
+
+.contact-button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+/************************************
+ ハンバーガーボタン
+************************************/
+.hamburger-button {
+  display: none;
+  position: relative;
+  width: 32px;
+  height: 31px;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+}
+
+.hamburger-button__bar {
+  position: absolute;
+  left: 0;
+  height: 3px;
+  background: #4a3636;
+  width: 32px;
+  transition: top 0.4s linear, -webkit-transform 0.4s linear;
+  transition: transform 0.4s linear, top 0.4s linear;
+}
+
+.hamburger-button__bar:nth-of-type(1) {
+  top: 0;
+}
+
+.hamburger-button__bar:nth-of-type(2) {
+  top: 11px;
+}
+
+.hamburger-button__bar:nth-of-type(3) {
+  top: 23px;
+}
+
+.hamburger-button.active .hamburger-button__bar:nth-of-type(1) {
+  top: 10px;
+  transform: rotate(-135deg);
+}
+
+.hamburger-button.active .hamburger-button__bar:nth-of-type(2) {
+  display: none;
+}
+
+.hamburger-button.active .hamburger-button__bar:nth-of-type(3) {
+  top: 10px;
+  transform: rotate(135deg);
+}
+
+/************************************
+ドロワーメニュー
+************************************/
+.drawer-menu {
+  position: fixed;
+  top: -120%;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 85%;
+  padding: 60px 0;
+  background: #fff;
+  transition: all 0.5s linear;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+.drawer-menu.show {
+  top: 64px;
+}
+
+.drawer-menu.show header {
+  box-shadow: none;
+}
+
+.drawer-menu-box {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.drawer-menu-box li {
+  font-size: 1.3rem;
+  margin-top: 40px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.drawer-contact-button {
+  margin-top: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: linear-gradient(to right, #ebc479, #e4a428);
+  width: auto;
+  height: 7vh;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.drawer-contact-button a {
+  color: white;
+}
+
 /************************************
 メインビジュアル
 ************************************/
-.mainvisual{
-    width: 90%;
-    margin: auto;
+.mainvisual {
+  width: 90%;
+  margin: auto;
 }
-.mainvisual-container{
-    display: flex;
-    flex-direction: column;
-    padding-top: 20%;
+
+.mainvisual-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding-top: 20%;
+  max-width: 1260px;
+  width: 100%;
+  margin: 0 auto;
 }
-.mainvisual-text{
-    color: white;
-    font-size: 3rem;
-    width: 70%;
-    letter-spacing: 0.5rem;
-    margin-bottom: 5vh;
-    line-height:1.2;
+
+.mainvisual-text {
+  color: white;
+  font-size: 3rem;
+  width: 100%;
+  letter-spacing: 0.3rem;
+  margin-bottom: 5vh;
+  line-height: 1.2;
 }
-.login-button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 1.5rem;
-    width: 20%;
-    border-radius: 10px;
-    background: linear-gradient(to right,#4090EA, #013065);
-    padding: 1rem 2rem;
-    text-align: center;
-    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
-    line-height:1.5;
+
+.login-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.3rem;
+  border-radius: 10px;
+  background: linear-gradient(to right, #4090ea, #013065);
+  padding: 20px 20px;
+  text-align: center;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+  line-height: 1.5;
+  max-width: 325px;
+  width: 100%;
 }
-.login-button:hover{
-    opacity: 0.7;
-    cursor: pointer;
+
+.login-button:hover {
+  opacity: 0.7;
+  cursor: pointer;
 }
+
 /************************************
 アピールエリア
 ************************************/
-.appeal-area{
-    background: linear-gradient(to right,#FFFFFF, #4090EA);
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    width: 90%;
-    margin: auto;
-    left: 50%;       /* 画面の横方向の中央 */
-    transform: translate(-50%, -50%); /* 要素自体の幅と高さの半分だけ左上に移動 */
-    top: 125%;
+.appeal-area {
+  background: linear-gradient(to right, #ffffff, #4090ea);
+  border-radius: 10px;
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  margin: auto;
+  left: 50%;
+  /* 画面の横方向の中央 */
+  transform: translate(-50%, -50%);
+  /* 要素自体の幅と高さの半分だけ左上に移動 */
+  top: 125%;
 }
-.appeal-area-container{
-    display: flex;
-    flex-direction: column;
-    width: 39%;
-    padding: 3%;
+
+.appeal-area-container {
+  display: flex;
+  flex-direction: column;
+  width: 39%;
+  padding: 3%;
 }
-.appeal-area-title{
-    font-size: 2rem;
-    margin-bottom: 10%;
+
+.appeal-area-title {
+  font-size: 2rem;
+  margin-bottom: 10%;
+  font-weight: 700;
+  font-size: 1.3rem;
 }
-.appeal-area-text{
-    margin-bottom: 10%;
-    overflow-wrap: break-word;
+
+.appeal-area-text {
+  margin-bottom: 10%;
+  overflow-wrap: break-word;
 }
-.appeal-area-button.login-button{
-    width: 60%;
+
+.appeal-area-img {
+  width: 59%;
+  max-width: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.appeal-area-img{
-    width: 59%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.appeal-area-img img {
+  width: 90%;
+  padding-top: 10%;
 }
-.appeal-area-img img{
-    width: 90%;
-    padding-top: 10%;
-}
+
 /************************************
 事業紹介
 ************************************/
-.business-section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 35%;
-}
-.business-container{
-    display: flex;
-    justify-content: flex-end;
-}
-.business-container.reverse{
-    justify-content: flex-start;
-}
-.business-box{
-    background: linear-gradient(to right,#F8F8F8, #BADBFF);
-    border-radius: 10px 0px 0px 10px;
-    width: 85%;
-    display: flex;
-    justify-content: space-between;
-    padding: 2%;
-    margin-bottom: 5%;
-}
-.business-box.reverse{
-    border-radius: 0px 10px 10px 0px;
-    flex-direction: row-reverse;
-}
-.business-box-img{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 39%;
-}
-.business-box-img img{
-    border-radius: 10px;
-}
-.business-box-contents{
-    display: flex;
-    flex-direction: column;
-    width: 59%;
-}
-.business-box-title.reverse{
-    text-align: right;
+.business-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 35%;
 }
 
-.business-box-title{
-    font-size: 2rem;
-    margin-bottom: 5%;
+.business-container {
+  display: flex;
+  justify-content: flex-end;
 }
-.business-box-text.reverse{
-    text-align: right;
+
+.business-container.reverse {
+  justify-content: flex-start;
 }
+
+.business-box {
+  background: linear-gradient(to right, #f8f8f8, #badbff);
+  border-radius: 10px 0px 0px 10px;
+  width: 85%;
+
+  display: flex;
+  justify-content: space-between;
+  padding: 2%;
+  margin-bottom: 5%;
+}
+
+.business-box.reverse {
+  border-radius: 0px 10px 10px 0px;
+  flex-direction: row-reverse;
+}
+
+.business-box-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 39%;
+}
+
+.business-box-img img {
+  border-radius: 10px;
+}
+
+.business-box-contents {
+  display: flex;
+
+  flex-direction: column;
+  width: 59%;
+}
+
+.business-box-title.reverse {
+  text-align: right;
+}
+
+.business-box-title {
+  font-size: 2rem;
+  margin-bottom: 5%;
+}
+
+.business-box-text {
+  /* 文字がボックスからはみ出るため下記を追記 */
+  overflow-wrap: anywhere;
+}
+
+.business-box-text.reverse {
+  text-align: right;
+}
+
 /************************************
 会社概要
 ************************************/
-.company-section{
-    display: flex;
-    flex-direction: column;
-    background-image: url('./images/1.png');
-    background-position: center;
-    align-items: center;
-    background-size: cover;
-    padding: 5%;
+.company-section {
+  display: flex;
+  flex-direction: column;
+  background-image: url("./images/1.png");
+  background-position: center;
+  align-items: center;
+  background-size: cover;
+  padding: 5%;
 }
-.company-box{
-    opacity: 0.8;
-    background-color: white;
-    border-radius: 10px;
-    padding: 3%;
-    width: 90%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    font-size: 1.5rem;
+
+.company-box {
+  opacity: 0.8;
+  background-color: white;
+  border-radius: 10px;
+  padding: 3%;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
 }
-.company-box-row{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 5%;
+
+.company-box-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5%;
 }
-.company-box-row-title{
-    width: 30%;
+
+.company-box-row-title {
+  width: 30%;
 }
-.company-box-row-contents{
-    width: 70%;
+
+.company-box-row-contents {
+  width: 70%;
 }
+
 /************************************
 お問い合わせ
 ************************************/
-.contact-section{
-    display: flex;
-    flex-direction: column;
-    padding: 5% 0%;
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  padding: 5% 0%;
 }
-.contact-form{
-    width: 85%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
+
+.contact-form {
+  width: 85%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
 }
-.form-row{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 5vh;
-    margin-bottom: 3%;
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 5vh;
+  margin-bottom: 3%;
 }
-.form-row-title{
-    width: 30%;
-    color: white;
-    font-size: 1.3rem;
-    display: flex;
-    align-items: flex-start;
+
+.form-row-title {
+  width: 40%;
+  color: white;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: flex-start;
 }
-.form-row-contents{
-    background-color: white;
-    border-radius: 10px !important;
-    width: 70%;
-    padding: 2%;
+
+.form-row-contents {
+  background-color: white;
+  border-radius: 10px !important;
+  width: 60%;
+  padding: 2%;
 }
-.form-row.textarea{
-    height: 20vh;
+
+.form-row.textarea {
+  height: 20vh;
 }
-.form-row-contents.textarea{
-    height: 20vh;
+
+.form-row-contents.textarea {
+  height: 20vh;
 }
-.contact-button.submit{
-    margin-top: 10%;
-    font-size: 1.5rem;
-    font-family: "MS Mincho", "Hiragino Mincho ProN", "Serif";
+
+.contact-button.submit {
+  margin-top: 10%;
+  font-size: 1.5rem;
+  font-family: "MS Mincho", "Hiragino Mincho ProN", "Serif";
 }
-.footer-section{
-    margin-top: 5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-image: url('./images/footer.png');
-    height: 50vh;
-    background-position: center;
-    background-size: cover;
-    justify-content: flex-end;
+
+/************************************
+フッターメニュー
+************************************/
+.footer-section {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("./images/footer.png");
+  height: 50vh;
+  max-height: 1290px;
+  background-position: center;
+  background-size: cover;
+  justify-content: flex-end;
+  padding-top: 365px;
+  background-repeat: no-repeat;
 }
-.footer-logo-title{
-    color: white;
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.footer-logo-title {
+  color: white;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.footer-logo-title img{
-    width: 7%;
-    margin-right: 2%;
+
+.footer-logo-title img {
+  width: 7%;
+  margin-right: 2%;
 }
-.footer-title{
-    font-size: 2.1rem;
-    font-family: "Oswald", sans-serif;
+
+.footer-title {
+  font-size: 2.1rem;
+  font-family: "Oswald", sans-serif;
 }
-.footer-menu{
-    display: flex;
-    justify-content: space-around;
-    width: 50%;
-    padding: 5% 0%;
-    font-size: 1.3rem;
+
+.footer-menu {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  padding: 5% 0%;
+  font-size: 1.3rem;
 }
 
 /************************************
 フッター
 ************************************/
-footer{
-    background-color:#013065;
-    color: white;
-    text-align:center;
-    padding: 1%;
+footer {
+  background-color: #013065;
+  color: white;
+  text-align: center;
+  padding: 1%;
+}
+
+/************************************
+フェードイン（確認）
+************************************/
+/* 最初は透明にしておく */
+.fade-in-section {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* フェードイン時に不透明にする */
+.fade-in {
+  opacity: 1;
+}
+
+/* ==========================================================
+ メディアクエリ（max-width: 767px）
+=========================================================== */
+@media screen and (max-width: 767px) {
+  /* ヘッダー */
+  header {
+    margin: 0;
+    left: 0;
+    top: 0;
+    transform: none;
+    height: auto;
+    width: 100%;
+    padding: 10px 25px 10px 20px;
+    border-radius: 0;
+  }
+
+  .header-menu-contact-box {
+    display: none;
+  }
+
+  .header-logo-box {
+    width: 100%;
+    justify-content: flex-start;
+    font-size: 1.3rem;
+  }
+
+  .header-logo-box img {
+    max-width: 77px;
+    min-width: 70px;
+    width: 15%;
+    margin-right: 5px;
+  }
+  .header-logo-title {
+    width: 85%;
+  }
+
+  .hamburger-button {
+    display: block;
+  }
+
+  /* メインビジュアル */
+  .mainvisual-header-appeal-area {
+    height: 1320px;
+    background-size: 850px auto;
+    background-repeat: no-repeat;
+    background-position: 50% 6%;
+  }
+  .mainvisual-container {
+    padding-top: 275px;
+    justify-content: flex-start;
+  }
+  .mainvisual-text {
+    font-size: 1.58rem;
+    width: 100%;
+    letter-spacing: 0.01em;
+    line-height: 1.7;
+  }
+  .mainvisual-login-button {
+    /*margin: 30px auto 0;*/
+    font-size: 0.9rem;
+    letter-spacing: 0.01em;
+    padding: 10px;
+  }
+  /* アピールエリア */
+  .appeal-area {
+    top: 70%;
+  }
+  .appeal-area-container {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10% 5%;
+  }
+  .appeal-area-text {
+    margin-top: 0;
+    padding-top: 260px;
+    margin-bottom: 0;
+  }
+  .appeal-area-button.login-button {
+    margin-top: 30px;
+    display: inline-block;
+    font-size: 18px;
+    letter-spacing: 0.01em;
+  }
+  .appeal-area-img {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+    max-width: 400px;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  .appeal-area-img img {
+    width: 100%;
+    padding-top: 0;
+  }
+  /* 事業紹介 */
+  .business-section {
+    margin-top: 15%;
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+  .business-container {
+    display: block;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 500px;
+  }
+  .business-box {
+    border-radius: 10px;
+    width: 100%;
+    display: block;
+    padding: 0;
+  }
+  .business-box.reverse {
+    border-radius: 10px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  .business-box-img {
+    display: block;
+    width: 100%;
+  }
+  .business-box-img img {
+    border-radius: 10px 10px 0 0;
+  }
+  .business-box-contents {
+    display: block;
+    width: 100%;
+    padding: 4%;
+  }
+  .business-box-title.reverse {
+    text-align: left;
+  }
+  .business-box-title {
+    font-size: 1.2rem;
+  }
+  .business-box-text {
+    margin-top: 15px;
+  }
+  .business-box-text.reverse {
+    text-align: left;
+  }
+  /* お問い合わせ */
+  .contact-section {
+    padding: 10% 5%;
+  }
+  .contact-form {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 500px;
+    gap: 50px;
+  }
+  .form-row {
+    display: block;
+  }
+  .form-row-title {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+  .form-row.form-row-title:nth-child(2) {
+    font-size: 1rem;
+  }
+  .form-row-contents {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .contact-button.submit {
+    width: 100%;
+    max-width: 250px;
+  }
+  /* フッターメニュー */
+  .footer-section {
+    height: 315px;
+    padding-top: 135px;
+  }
+  .footer-logo-title {
+    width: 100%;
+  }
+  .footer-menu {
+    display: block;
+    width: 100%;
+  }
+  .footer-menu li {
+    margin-top: 15px;
+    text-align: center;
+  }
+  footer {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 1rem;
+  }
+}
+/* ==========================================================
+ メディアクエリ（max-width: 959px）
+=========================================================== */
+@media screen and (max-width: 959px) {
+  /* 基本設定 */
+  .section-title {
+    font-size: 1.7rem;
+  }
+
+  /* 会社概要 */
+  .company-section {
+    padding: 10% 5%;
+  }
+  .company-box {
+    margin-top: 20px;
+    padding: 5%;
+    width: 100%;
+    max-width: 450px;
+    font-size: 1.2rem;
+  }
+  .company-box-row {
+    display: block;
+  }
+  .company-box-row-title {
+    width: 100%;
+  }
+  .company-box-row-contents {
+    margin-top: 8px;
+    width: 100%;
+    overflow-wrap: anywhere;
+  }
+}
+/* お問い合わせ */
+.form-row {
+  margin-bottom: 5%;
+}
+
+.form-row:nth-child(2) {
+  margin-bottom: 8%;
+}
+
+/* フッター */
+.footer-menu li {
+  font-size: 1.1rem;
+}
+
+/* ==========================================================
+ メディアクエリ(min-width: 768px max-width: 1024px）
+=========================================================== */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  header {
+    width: 95%;
+    padding: 1vh 2vh;
+    top: 6vh;
+  }
+
+  .contact-button {
+    height: auto;
+    padding: 10px;
+  }
+
+  /* メインビジュアル */
+  .mainvisual-header-appeal-area {
+    height: 1000px;
+    background-position: 50% 0;
+    width: 100%; /* 要素の幅を100%に設定 */
+    background-image: linear-gradient(
+        to bottom,
+        transparent calc(100% - 300px),
+        #013065 calc(100% - 300px)
+      ),
+      url("./images/background2.png");
+    background-size: cover; /* 背景画像を要素に合わせて調整 */
+    background-repeat: no-repeat; /* 背景画像の繰り返しを禁止 */
+  }
+  .mainvisual-container {
+    padding-top: 25%;
+  }
+  .mainvisual-text {
+    font-size: 1.58rem;
+    width: 100%;
+    letter-spacing: 0.01em;
+    line-height: 1.7;
+  }
+  .mainvisual-login-button {
+    /* margin: 0 auto; */
+    font-size: 0.9rem;
+    letter-spacing: 0.01em;
+    padding: 10px;
+  }
+  /* アピールエリア */
+  .appeal-area {
+    top: 70%;
+  }
+}
+
+/* ==========================================================
+ メディアクエリ(min-width: 768px max-width: 1280px）
+=========================================================== */
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  /* ヘッダー */
+  .header-logo-title {
+    font-size: 20px;
+  }
+  .header-menu-box li {
+    font-size: 0.9rem;
+  }
+  .contact-button {
+    font-size: 1.1rem;
+  }
+
+  /* メインビジュアル */
+  .mainvisual-text {
+    font-size: 2rem;
+  }
+  /* アピールエリア */
+  .appeal-area-container {
+    width: 50%;
+  }
+  .appeal-area-button.login-button {
+    font-size: 1rem;
+    padding: 10px 8px;
+  }
+  .appeal-area-img {
+    width: 50%;
+  }
+
+  /* 事業紹介 */
+  .business-section {
+    margin-top: 5%;
+  }
 }
