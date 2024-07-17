@@ -179,6 +179,9 @@ button {
   cursor: pointer;
   font: inherit;
 }
+html {
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
 
 /************************************
 基本設定
@@ -613,6 +616,11 @@ header {
 /************************************
 お問い合わせ
 ************************************/
+.mail-address{
+  width: 40%;
+  display: block;
+  margin: auto;
+}
 .contact-section {
   display: flex;
   flex-direction: column;
@@ -725,7 +733,7 @@ footer {
 /* 最初は透明にしておく */
 .fade-in-section {
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.7s ease-in-out;
 }
 
 /* フェードイン時に不透明にする */
@@ -908,6 +916,9 @@ footer {
   .contact-button.submit {
     width: 100%;
     max-width: 250px;
+  }
+  .mail-address{
+    width: 70%;
   }
   /* フッターメニュー */
   .footer-section {
